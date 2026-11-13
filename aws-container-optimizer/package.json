@@ -1,0 +1,40 @@
+{
+  "name": "aws-container-optimizer",
+  "version": "1.0.0",
+  "description": "AWS CDK app that analyzes ECS and EKS container workloads for cost optimization and reliability issues, producing a weekly HTML report with right-sizing recommendations and savings estimates.",
+  "private": true,
+  "bin": {
+    "aws-container-optimizer": "bin/app.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy",
+    "diff": "cdk diff",
+    "destroy": "cdk destroy"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.9",
+    "aws-cdk": "2.147.3",
+    "esbuild": "^0.21.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.4.5"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch": "^3.600.0",
+    "@aws-sdk/client-ecs": "^3.600.0",
+    "@aws-sdk/client-eks": "^3.600.0",
+    "@aws-sdk/client-s3": "^3.600.0",
+    "@aws-sdk/client-sns": "^3.600.0",
+    "aws-cdk-lib": "2.147.3",
+    "constructs": "^10.3.0",
+    "source-map-support": "^0.5.21"
+  }
+}

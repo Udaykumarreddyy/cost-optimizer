@@ -1,0 +1,41 @@
+{
+  "name": "aws-network-cost-analyzer",
+  "version": "1.0.0",
+  "description": "Serverless AWS CDK application that scans NAT Gateways, cross-AZ data transfer, VPC endpoints, idle Load Balancers, and unused Elastic IPs to surface hidden AWS networking costs and savings recommendations.",
+  "private": true,
+  "bin": {
+    "aws-network-cost-analyzer": "bin/app.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy",
+    "destroy": "cdk destroy",
+    "diff": "cdk diff"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.9",
+    "aws-cdk": "2.147.3",
+    "esbuild": "^0.21.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.5.3"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.147.3",
+    "constructs": "^10.3.0",
+    "source-map-support": "^0.5.21",
+    "@aws-sdk/client-ec2": "^3.600.0",
+    "@aws-sdk/client-elastic-load-balancing-v2": "^3.600.0",
+    "@aws-sdk/client-cloudwatch": "^3.600.0",
+    "@aws-sdk/client-cost-explorer": "^3.600.0",
+    "@aws-sdk/client-s3": "^3.600.0",
+    "@aws-sdk/client-sns": "^3.600.0"
+  }
+}

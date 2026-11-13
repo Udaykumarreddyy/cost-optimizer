@@ -1,0 +1,37 @@
+{
+  "name": "aws-log-intelligence",
+  "version": "1.0.0",
+  "description": "AWS CDK app that analyzes CloudWatch Log Groups weekly to find cost optimization opportunities and detect problems (error spikes, missing retention, expensive ingestion).",
+  "bin": {
+    "aws-log-intelligence": "bin/app.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy",
+    "diff": "cdk diff",
+    "destroy": "cdk destroy"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.9",
+    "aws-cdk": "^2.147.0",
+    "esbuild": "^0.21.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.5.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch": "^3.609.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.609.0",
+    "@aws-sdk/client-s3": "^3.609.0",
+    "@aws-sdk/client-sns": "^3.609.0",
+    "aws-cdk-lib": "^2.147.0",
+    "constructs": "^10.3.0",
+    "source-map-support": "^0.5.21"
+  }
+}
